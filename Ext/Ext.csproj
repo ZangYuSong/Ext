@@ -1,0 +1,790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B05042EA-0A25-4496-AA1E-E118EE3209D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ext</RootNamespace>
+    <AssemblyName>Ext</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="app\controller\form\Form.js" />
+    <Content Include="app\controller\grid\Grid.js" />
+    <Content Include="app\controller\tree\Navigation.js" />
+    <Content Include="app\model\combobox\Combobox.js" />
+    <Content Include="app\model\grid\Grid.js" />
+    <Content Include="app\store\combobox\Combobox.js" />
+    <Content Include="app\store\grid\Grid.js" />
+    <Content Include="app\store\tree\Navigation.js" />
+    <Content Include="app\store\tree\Tree.js" />
+    <Content Include="app\ux\DateTimeField.js" />
+    <Content Include="app\ux\DateTimePicker.js" />
+    <Content Include="app\view\form\Form.js" />
+    <Content Include="app\view\grid\Grid.js" />
+    <Content Include="app\view\toolbar\Toolbar.js" />
+    <Content Include="app\view\tree\Navigation.js" />
+    <Content Include="app\view\tree\Tree.js" />
+    <Content Include="app\view\Viewport.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\Awesome\css\font-awesome.css" />
+    <Content Include="Scripts\Awesome\css\font-awesome.min.css" />
+    <Content Include="Scripts\Awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\extjs-5.1\bootstrap.js" />
+    <Content Include="Scripts\extjs-5.1\ext-all-debug.js" />
+    <Content Include="Scripts\extjs-5.1\ext-all.js" />
+    <Content Include="Scripts\extjs-5.1\ext.js" />
+    <Content Include="Scripts\extjs-5.1\icons\accept.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\accept.png" />
+    <Content Include="Scripts\extjs-5.1\icons\add.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\add.png" />
+    <Content Include="Scripts\extjs-5.1\icons\application_go.png" />
+    <Content Include="Scripts\extjs-5.1\icons\application_view_list.png" />
+    <Content Include="Scripts\extjs-5.1\icons\book.png" />
+    <Content Include="Scripts\extjs-5.1\icons\cog.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\cog.png" />
+    <Content Include="Scripts\extjs-5.1\icons\cog_edit.png" />
+    <Content Include="Scripts\extjs-5.1\icons\connect.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\connect.png" />
+    <Content Include="Scripts\extjs-5.1\icons\control_rewind.png" />
+    <Content Include="Scripts\extjs-5.1\icons\cross.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\cut.png" />
+    <Content Include="Scripts\extjs-5.1\icons\delete.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\delete.png" />
+    <Content Include="Scripts\extjs-5.1\icons\edit_task.png" />
+    <Content Include="Scripts\extjs-5.1\icons\error.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\error.png" />
+    <Content Include="Scripts\extjs-5.1\icons\feed_add.png" />
+    <Content Include="Scripts\extjs-5.1\icons\feed_delete.png" />
+    <Content Include="Scripts\extjs-5.1\icons\feed_error.png" />
+    <Content Include="Scripts\extjs-5.1\icons\folder_go.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\folder_go.png" />
+    <Content Include="Scripts\extjs-5.1\icons\folder_wrench.png" />
+    <Content Include="Scripts\extjs-5.1\icons\grid.png" />
+    <Content Include="Scripts\extjs-5.1\icons\image_add.png" />
+    <Content Include="Scripts\extjs-5.1\icons\information.png" />
+    <Content Include="Scripts\extjs-5.1\icons\page_copy.png" />
+    <Content Include="Scripts\extjs-5.1\icons\page_white_edit.png" />
+    <Content Include="Scripts\extjs-5.1\icons\paintbrush.png" />
+    <Content Include="Scripts\extjs-5.1\icons\paste_plain.png" />
+    <Content Include="Scripts\extjs-5.1\icons\plugin.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\plugin_add.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\rss_go.png" />
+    <Content Include="Scripts\extjs-5.1\icons\table_refresh.png" />
+    <Content Include="Scripts\extjs-5.1\icons\text_list_bullets.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\user.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_add.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\user_add.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_comment.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_delete.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\user_delete.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_edit.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_female.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\user_female.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_gray.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_green.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\user_green.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_orange.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_red.png" />
+    <Content Include="Scripts\extjs-5.1\icons\user_suit.gif" />
+    <Content Include="Scripts\extjs-5.1\icons\user_suit.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-locale\build\ext-locale-zh_CN.js" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\ext-theme-crisp-debug.js" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\ext-theme-crisp.js" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-debug.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-debug_01.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-debug_02.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-rtl-debug.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-rtl-debug_01.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-rtl-debug_02.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-rtl.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-rtl_01.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all-rtl_02.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all_01.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\ext-theme-crisp-all_02.css" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-arrow-open-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-arrow-open.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-scroll-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-scroll-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-split-arrow-open-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-split-arrow-open.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-split-arrow-over-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-split-arrow-over.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-split-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\breadcrumb\default-split-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn-group\btn-group-default-framed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn-group\btn-group-default-framed-notitle-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn-group\btn-group-default-framed-notitle-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn-group\btn-group-default-framed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-large-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-medium-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-small-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-large-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-medium-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-default-toolbar-small-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-large-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-pressed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\btn\btn-plain-toolbar-small-pressed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-large-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-large-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-large-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-large-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-large-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-large-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-medium-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-medium-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-medium-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-medium-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-medium-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-medium-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-small-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-small-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-small-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-small-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-small-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-small-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-large-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-large-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-large-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-large-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-medium-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-medium-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-small-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-small-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-small-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\default-toolbar-small-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\grid-cell-small-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\grid-cell-small-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\grid-cell-small-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\grid-cell-small-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\grid-cell-small-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-large-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-large-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-large-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-large-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-medium-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-medium-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-small-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-small-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-small-s-arrow-b.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\button\plain-toolbar-small-s-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\datepicker\arrow-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\datepicker\arrow-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\datepicker\month-arrow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\dd\drop-add.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\dd\drop-no.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\dd\drop-yes.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\editor\tb-sprite.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\fieldset\collapse-tool.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\checkbox.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\clear-trigger-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\clear-trigger.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\date-trigger-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\date-trigger.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\exclamation.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\radio.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\search-trigger-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\search-trigger.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\spinner-down-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\spinner-down.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\spinner-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\spinner-up-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\spinner-up.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\spinner.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\tag-field-item-close.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\trigger-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\form\trigger.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\col-move-bottom.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\col-move-top.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\columns.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\dd-insert-arrow-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\dd-insert-arrow-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\dirty-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\dirty.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\drop-no.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\drop-yes.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\filters\equals.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\filters\find.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\filters\greater_than.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\filters\less_than.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\group-by.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\group-collapse.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\group-expand.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\hd-pop.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\hmenu-asc.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\hmenu-desc.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\hmenu-lock.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\hmenu-unlock.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\loading.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\page-first.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\page-last.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\page-next.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\page-prev.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\pick-button.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\refresh.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\sort_asc.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\grid\sort_desc.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\loadmask\loading.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\magnify.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-checked.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-group-checked.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-menu-parent-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-menu-parent.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-scroll-bottom.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-scroll-top.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\menu\default-unchecked.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-collapsed-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-left-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-right-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-default-framed-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-collapsed-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-left-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-right-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel-header\panel-header-light-framed-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel\panel-default-framed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel\panel-default-framed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel\panel-light-framed-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\panel\panel-light-framed-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\shared\icon-error.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\shared\icon-info.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\shared\icon-question.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\shared\icon-warning.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\sizer\e-handle.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\sizer\ne-handle.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\sizer\nw-handle.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\sizer\s-handle.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\sizer\se-handle.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\sizer\sw-handle.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\slider\slider-bg.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\slider\slider-thumb.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\slider\slider-v-bg.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\slider\slider-v-thumb.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-plain-scroll-bottom.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-plain-scroll-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-plain-scroll-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-plain-scroll-top.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-scroll-bottom.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-scroll-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-scroll-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab-bar\default-scroll-top.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-disabled-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-close.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-disabled-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-disabled-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-disabled-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-disabled-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-disabled-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-active-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-active-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-active-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-focus-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-over-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-over-fbg.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-over-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tab\tab-default-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tip\tip-default-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tip\tip-default-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tip\tip-form-invalid-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tip\tip-form-invalid-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\default-more-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\default-more.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\default-scroll-bottom.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\default-scroll-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\default-scroll-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\default-scroll-top.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\footer-more-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\footer-more.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\footer-scroll-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\toolbar\footer-scroll-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tools\tool-sprites-dark.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tools\tool-sprites.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\arrows-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\arrows.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-above.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-add.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-add.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-append.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-below.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-between.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-between.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-no.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-no.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-over.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-over.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-under.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-under.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-yes.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\drop-yes.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-end-minus-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-end-minus.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-end-plus-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-end-plus.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-end-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-end.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-line-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-line.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-minus-nl-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-minus-nl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-minus-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-minus.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-plus-nl-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-plus-nl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-plus-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-plus.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\elbow.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\folder-open-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\folder-open.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\folder-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\folder.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\leaf-rtl.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\leaf.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\tree\loading.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\util\splitter\mini-bottom.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\util\splitter\mini-left.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\util\splitter\mini-right.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\util\splitter\mini-top.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\ux\dashboard\magnify.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-bottom-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-bottom-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-left-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-right-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-collapsed-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-left-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-left-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-left-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-right-corners-rtl.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-right-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-right-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-top-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window-header\window-header-default-top-sides.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window\toast\fade-blue.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window\toast\fader.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window\toast\icon16_error.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window\toast\icon16_info.png" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window\window-default-corners.gif" />
+    <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\images\window\window-default-sides.gif" />
+    <Content Include="Scripts\jquery\jquery.form.min.js" />
+    <Content Include="Scripts\jquery\jquery.js" />
+    <Content Include="Scripts\jquery\jquery.min.js" />
+    <Content Include="Scripts\jquery\jquery.validate.js" />
+    <Content Include="Scripts\jquery\jquery.validate.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web\DataBind.aspx" />
+    <Content Include="Web\DataBind.js" />
+    <Content Include="Web\ExtDataTime.js" />
+    <Content Include="Web\form.aspx" />
+    <Content Include="Web\form.js" />
+    <Content Include="Web\grid.aspx" />
+    <Content Include="Web\grid.js" />
+    <Content Include="Web\layouts.aspx" />
+    <Content Include="Web\layouts.js" />
+    <Content Include="Web\MessageBox.aspx" />
+    <Content Include="Web\MessageBox.js" />
+    <Content Include="Web\panel.aspx" />
+    <Content Include="Web\panel.js" />
+    <Content Include="Web\tab.aspx" />
+    <Content Include="Web\tab.js" />
+    <Content Include="Web\toolbar.aspx" />
+    <Content Include="Web\toolbar.js" />
+    <Content Include="Web\tree.aspx" />
+    <Content Include="Web\tree.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\server\form\Form.ashx.cs">
+      <DependentUpon>Form.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="app\server\grid\Grid.ashx.cs">
+      <DependentUpon>Grid.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="app\server\tree\Navigation.ashx.cs">
+      <DependentUpon>Navigation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\DataBind.aspx.cs">
+      <DependentUpon>DataBind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\DataBind.aspx.designer.cs">
+      <DependentUpon>DataBind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\form.aspx.cs">
+      <DependentUpon>form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\form.aspx.designer.cs">
+      <DependentUpon>form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\grid.aspx.cs">
+      <DependentUpon>grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\grid.aspx.designer.cs">
+      <DependentUpon>grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\layouts.aspx.cs">
+      <DependentUpon>layouts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\layouts.aspx.designer.cs">
+      <DependentUpon>layouts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\MessageBox.aspx.cs">
+      <DependentUpon>MessageBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\MessageBox.aspx.designer.cs">
+      <DependentUpon>MessageBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\panel.aspx.cs">
+      <DependentUpon>panel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\panel.aspx.designer.cs">
+      <DependentUpon>panel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\tab.aspx.cs">
+      <DependentUpon>tab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\tab.aspx.designer.cs">
+      <DependentUpon>tab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\toolbar.aspx.cs">
+      <DependentUpon>toolbar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\toolbar.aspx.designer.cs">
+      <DependentUpon>toolbar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\tree.aspx.cs">
+      <DependentUpon>tree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\tree.aspx.designer.cs">
+      <DependentUpon>tree.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\model\form\" />
+    <Folder Include="app\store\form\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\server\grid\Grid.ashx" />
+    <Content Include="app\server\tree\Navigation.ashx" />
+    <Content Include="app\server\form\Form.ashx" />
+    <None Include="Scripts\Awesome\css\font-awesome.css.map" />
+    <None Include="Scripts\Awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Scripts\Awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Scripts\Awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Scripts\Awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="Scripts\Awesome\fonts\FontAwesome.otf" />
+    <None Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\config.rb" />
+    <None Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\ext-theme-crisp-all-debug.scss" />
+    <None Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\ext-theme-crisp-all-rtl-debug.scss" />
+    <None Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\resources\Readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9895</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
