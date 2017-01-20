@@ -154,5 +154,8 @@
         text: "重置",
         glyph: "xf021@FontAwesome",
         action: "reset"
-    }]
+    }],
+    initComponent: function () {
+        this.callParent();
+    }
 });

@@ -27,7 +27,7 @@ namespace Ext.app.server.tree
 
         private void loadData(HttpContext context)
         {
-            string[,] data = { { "0", "网格(grid)", "Demo.view.grid.Grid" }, { "1", "表单(form)", "Demo.view.form.Form" }, { "2", "树(tree)", "Demo.view.tree.Tree" } };
+            string[,] data = { { "0", "网格(grid)", "Demo.view.grid.Grid" }, { "1", "表单(form)", "Demo.view.form.Form" }, { "2", "树(tree)", "Demo.view.tree.Tree" }, { "3", "消息提醒(MessageBox)", "Demo.view.window.MessageBox" } };
             string json = "{\"nodes\":[";
             for (int i = 0; i < data.GetLength(0); i++)
             {

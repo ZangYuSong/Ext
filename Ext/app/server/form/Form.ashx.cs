@@ -19,6 +19,9 @@ namespace Ext.app.server.form
                 case "formUpload":
                     formUpload(context);
                     break;
+                case "formGetData":
+                    formGetData(context);
+                    break;
             }
         }
 
@@ -40,6 +43,24 @@ namespace Ext.app.server.form
             json += context.Request.Form["combobox"] + "    ";
             json += context.Request.Form["datetime"] + "    ";
             context.Response.Write(json + "\"}");
+            context.Response.End();
+        }
+
+        private void formGetData(HttpContext context)
+        {
+            string json = "{\"success\":\"true\",\"data\":{";
+            json += "\"username\":\"username\",";
+            json += "\"password\":\"password\",";
+            json += "\"textarea\":\"textarea\",";
+            json += "\"upload\":\"C:\\fakepath\\Jellyfish.jpg\",";
+            json += "\"numberfield\":\"1\",";
+            json += "\"checkbox\":\"2,3\",";
+            json += "\"radio\":\"C\",";
+            json += "\"date\":\"2017-02-15\",";
+            json += "\"time\":\"08:30\",";
+            json += "\"combobox\":\"1\",";
+            json += "\"datetime\":\"2017-02-15 08:30:00\"";
+            context.Response.Write(json + "}}");
             context.Response.End();
         }
 
