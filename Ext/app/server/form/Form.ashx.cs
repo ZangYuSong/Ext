@@ -54,8 +54,8 @@ namespace Ext.app.server.form
             json += "\"textarea\":\"textarea\",";
             json += "\"upload\":\"C:\\fakepath\\Jellyfish.jpg\",";
             json += "\"numberfield\":\"1\",";
-            json += "\"checkbox\":\"2,3\",";
-            json += "\"radio\":\"C\",";
+            json += "\"checkboxgroup\":\"2,3\",";
+            json += "\"radiogroup\":\"C\",";
             json += "\"date\":\"2017-02-15\",";
             json += "\"time\":\"08:30\",";
             json += "\"combobox\":\"1\",";
