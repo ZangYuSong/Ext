@@ -12,7 +12,8 @@
     },
     root: {
         text: "所有菜单",
-        id: "0"
+        id: "0",
+        checked: false
     },
     autoLoad: true
 });

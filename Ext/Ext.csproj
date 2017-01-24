@@ -51,8 +51,11 @@
     <Content Include="app\controller\form\Form.js" />
     <Content Include="app\controller\grid\Grid.js" />
     <Content Include="app\controller\tree\Navigation.js" />
+    <Content Include="app\controller\tree\Tree.js" />
+    <Content Include="app\controller\window\MessageBox.js" />
     <Content Include="app\model\combobox\Combobox.js" />
     <Content Include="app\model\grid\Grid.js" />
+    <Content Include="app\model\tree\Navigation.js" />
     <Content Include="app\store\combobox\Combobox.js" />
     <Content Include="app\store\grid\Grid.js" />
     <Content Include="app\store\tree\Navigation.js" />
@@ -65,6 +68,8 @@
     <Content Include="app\view\tree\Navigation.js" />
     <Content Include="app\view\tree\Tree.js" />
     <Content Include="app\view\Viewport.js" />
+    <Content Include="app\view\window\MessageBox.js" />
+    <Content Include="Style\layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="index.html" />
     <Content Include="Scripts\Awesome\css\font-awesome.css" />
@@ -74,61 +79,7 @@
     <Content Include="Scripts\extjs-5.1\ext-all-debug.js" />
     <Content Include="Scripts\extjs-5.1\ext-all.js" />
     <Content Include="Scripts\extjs-5.1\ext.js" />
-    <Content Include="Scripts\extjs-5.1\icons\accept.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\accept.png" />
-    <Content Include="Scripts\extjs-5.1\icons\add.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\add.png" />
-    <Content Include="Scripts\extjs-5.1\icons\application_go.png" />
-    <Content Include="Scripts\extjs-5.1\icons\application_view_list.png" />
-    <Content Include="Scripts\extjs-5.1\icons\book.png" />
-    <Content Include="Scripts\extjs-5.1\icons\cog.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\cog.png" />
-    <Content Include="Scripts\extjs-5.1\icons\cog_edit.png" />
-    <Content Include="Scripts\extjs-5.1\icons\connect.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\connect.png" />
-    <Content Include="Scripts\extjs-5.1\icons\control_rewind.png" />
-    <Content Include="Scripts\extjs-5.1\icons\cross.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\cut.png" />
-    <Content Include="Scripts\extjs-5.1\icons\delete.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\delete.png" />
-    <Content Include="Scripts\extjs-5.1\icons\edit_task.png" />
-    <Content Include="Scripts\extjs-5.1\icons\error.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\error.png" />
-    <Content Include="Scripts\extjs-5.1\icons\feed_add.png" />
-    <Content Include="Scripts\extjs-5.1\icons\feed_delete.png" />
-    <Content Include="Scripts\extjs-5.1\icons\feed_error.png" />
-    <Content Include="Scripts\extjs-5.1\icons\folder_go.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\folder_go.png" />
-    <Content Include="Scripts\extjs-5.1\icons\folder_wrench.png" />
-    <Content Include="Scripts\extjs-5.1\icons\grid.png" />
-    <Content Include="Scripts\extjs-5.1\icons\image_add.png" />
-    <Content Include="Scripts\extjs-5.1\icons\information.png" />
-    <Content Include="Scripts\extjs-5.1\icons\page_copy.png" />
-    <Content Include="Scripts\extjs-5.1\icons\page_white_edit.png" />
-    <Content Include="Scripts\extjs-5.1\icons\paintbrush.png" />
-    <Content Include="Scripts\extjs-5.1\icons\paste_plain.png" />
-    <Content Include="Scripts\extjs-5.1\icons\plugin.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\plugin_add.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\rss_go.png" />
-    <Content Include="Scripts\extjs-5.1\icons\table_refresh.png" />
-    <Content Include="Scripts\extjs-5.1\icons\text_list_bullets.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\user.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_add.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\user_add.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_comment.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_delete.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\user_delete.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_edit.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_female.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\user_female.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_gray.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_green.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\user_green.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_orange.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_red.png" />
-    <Content Include="Scripts\extjs-5.1\icons\user_suit.gif" />
-    <Content Include="Scripts\extjs-5.1\icons\user_suit.png" />
+    <Content Include="Scripts\extjs-5.1\icons\checkbox_half.png" />
     <Content Include="Scripts\extjs-5.1\packages\ext-locale\build\ext-locale-zh_CN.js" />
     <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\ext-theme-crisp-debug.js" />
     <Content Include="Scripts\extjs-5.1\packages\ext-theme-crisp\build\ext-theme-crisp.js" />
@@ -740,8 +691,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\model\form\" />
-    <Folder Include="app\store\form\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
