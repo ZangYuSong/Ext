@@ -1,9 +1,9 @@
 ﻿Ext.define("Demo.controller.tree.Tree", {
     extend: "Ext.app.ViewController",
-    alias: "controller.demo_tree_tree",
+    alias: "controller.demo_controller_tree",
     init: function () {
         this.control({
-            "tree": {
+            "demo_view_tree": {
                 checkchange: this.onCheckChange
             }
         });
@@ -13,16 +13,17 @@
         if (node.get("cls") != "") {
             ischecked = true;
         }
-        this.checkedChildNode(node, ischecked);
-        this.checkedParentNode(node, ischecked);
+        var me = this;
+        me.checkedChildNode(node, ischecked, me);
+        me.checkedParentNode(node, ischecked, me);
     },
     // 选中所有的子节点
-    checkedChildNode: function (node, ischecked) {
+    checkedChildNode: function (node, ischecked, me) {
         node.set("checked", ischecked);
         node.set("cls", "");
         if (node.hasChildNodes()) {     // 是否包含子节点
             node.eachChild(function (nodeChild) {
-                this.checkedChildNode(nodeChild, ischecked)
+                me.checkedChildNode(nodeChild, ischecked, me)
             });
         }
     },
@@ -30,7 +31,7 @@
     // 在Ext4.0之后，树的选定状态就只有选定和不选定，取消了半选定状态。
     // 因此在设计树的时候应该只给叶子节点(leaf)设置checked属性
     // 如果一定要使用半选定状态可以参考下述的代码
-    checkedParentNode: function (node, ischecked) {
+    checkedParentNode: function (node, ischecked, me) {
         var parent = node.parentNode;
         var partial = true;
         if (parent != null) {
@@ -50,7 +51,7 @@
                 parent.set("checked", ischecked);
                 parent.set("cls", "");
             }
-            this.checkedParentNode(parent, ischecked);
+            me.checkedParentNode(parent, ischecked, me);
         }
     }
 

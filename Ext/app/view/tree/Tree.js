@@ -4,8 +4,8 @@
         "Demo.store.tree.Tree",
         "Demo.controller.tree.Tree"
     ],
-    alias: "widget.tree",
-    controller: "demo_tree_tree",
+    alias: "widget.demo_view_tree",
+    controller: "demo_controller_tree",
     useArrows: true,
     animate: true,
     collapsible: true,
