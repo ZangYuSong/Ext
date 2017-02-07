@@ -31,7 +31,7 @@ namespace Ext.app.server.tree
             string json = "{\"nodes\":[";
             for (int i = 0; i < data.GetLength(0); i++)
             {
-                json += "{\"text\":\"" + data[i, 1] + "\",\"id\":\"" + data[i, 0] + "\",\"class\":\"" + data[i, 2] + "\",\"leaf\":\"true\"},";
+                json += "{\"text\":\"" + data[i, 1] + "\",\"id\":\"" + data[i, 0] + "\",\"classType\":\"" + data[i, 2] + "\",\"leaf\":\"true\"},";
             }
             json = json.Substring(0, json.Length - 1) + "]}";
             context.Response.ContentType = "application/json;charset=utf-8";

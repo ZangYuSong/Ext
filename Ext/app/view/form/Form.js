@@ -130,11 +130,12 @@
             name: "checkboxgroup",
             columns: 4,
             allowBlank: false,
-            items: [{ boxLabel: "选项1", inputValue: "1" },
-                    { boxLabel: "选项2", inputValue: "2" },
-                    { boxLabel: "选项3", inputValue: "3" },
-                    { boxLabel: "选项4", inputValue: "4" },
-                    { boxLabel: "选项5", inputValue: "5"}]
+            // items中必须有name且name一致 否则后台无法获取
+            items: [{ boxLabel: "选项1", name: "checkbox", inputValue: "1" },
+                    { boxLabel: "选项2", name: "checkbox", inputValue: "2" },
+                    { boxLabel: "选项3", name: "checkbox", inputValue: "3" },
+                    { boxLabel: "选项4", name: "checkbox", inputValue: "4" },
+                    { boxLabel: "选项5", name: "checkbox", inputValue: "5"}]
         }, {
             xtype: "radiogroup",
             fieldLabel: "单选按钮",

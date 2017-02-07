@@ -13,7 +13,8 @@
         if (rec.data.id != -1) {
             var centerInfo = Ext.getCmp("centerInfo");
             centerInfo.removeAll();
-            centerInfo.add(Ext.create(rec.data.class));
+            // rec.data.class 在IE8环境下会报错
+            centerInfo.add(Ext.create(rec.data.classType));
         }
     }
 });

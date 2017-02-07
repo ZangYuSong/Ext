@@ -22,7 +22,6 @@ function setForm() {
         fieldDefaults: {
             labelWidth: 75,
             labelAlign: "right",
-            anchor: "100%",
             margin: 5
         },
         items: [
@@ -152,36 +151,34 @@ function setForm() {
                             { boxLabel: "选项E", name: "radio", inputValue: "E" }
                         ]
                     }]
-            }, {
-                xtype: "datetimefield",
-                fieldLabel: "日期时间"
             }],
-        buttons: [{
-            text: "保存",
-            glyph: "xf0c7@FontAwesome",
-            formBind: true,
-            disabled: true,
-            handler: function () {
-                var form = this.up("form").getForm();
-                if (form.isValid()) {
-                    form.submit({
-                        url: "form.aspx?action=formUpload",
-                        type: "json",
-                        success: function (form, action) {
-                            Ext.Msg.alert("保存成功", action.result.data);
-                        },
-                        failure: function (form, action) {
-                            Ext.Msg.alert("操作失败", action.result.data);
-                        }
-                    });
+        buttons: [
+            {
+                text: "保存",
+                glyph: "xf0c7@FontAwesome",
+                formBind: true,
+                disabled: true,
+                handler: function () {
+                    var form = this.up("form").getForm();
+                    if (form.isValid()) {
+                        form.submit({
+                            url: "form.aspx?action=formUpload",
+                            type: "json",
+                            success: function (form, action) {
+                                Ext.Msg.alert("保存成功", action.result.data);
+                            },
+                            failure: function (form, action) {
+                                Ext.Msg.alert("操作失败", action.result.data);
+                            }
+                        });
+                    }
                 }
-            }
-        }, {
-            text: "重置",
-            glyph: "xf021@FontAwesome",
-            handler: function () {
-                this.up("form").getForm().reset();
-            }
-        }]
+            }, {
+                text: "重置",
+                glyph: "xf021@FontAwesome",
+                handler: function () {
+                    this.up("form").getForm().reset();
+                }
+            }]
     });
 }

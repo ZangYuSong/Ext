@@ -23,6 +23,9 @@
             form.submit({
                 url: "/app/server/form/Form.ashx?action=formUpload",
                 type: "json",
+                success: function (form, action) {
+                    Ext.Msg.alert("保存成功", action.result.data);
+                },
                 failure: function (form, action) {
                     Ext.Msg.alert("操作失败", action.result.data);
                 }
@@ -76,14 +79,14 @@
     overrideRadiogroupSetGet: function () {
         Ext.override(Ext.form.RadioGroup, {
             getValue: function () {
-                var val = "";
+                var val = [];
                 this.items.each(function (item) {
                     if (item.getValue()) {
-                        val = item.inputValue;
+                        val.push(item.inputValue);
                         return false;
                     }
                 });
-                return val;
+                return val; // 请返回数组。否则IE会报错
             },
             setValue: function (val) {
                 this.items.each(function (item) {
@@ -96,13 +99,13 @@
     overrideCheckboxgroupSetGet: function () {
         Ext.override(Ext.form.CheckboxGroup, {
             getValue: function () {
-                var val = "";
+                var val = [];
                 this.items.each(function (item) {
                     if (item.getValue()) {
-                        val += item.inputValue + ",";
+                        val.push(item.inputValue);
                     }
                 });
-                return val.slice(0, val.length - 1);
+                return val; // 请返回数组。否则IE会报错
             },
             setValue: function (val) {
                 var valAry = val.split(",");
